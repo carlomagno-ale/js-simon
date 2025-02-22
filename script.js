@@ -16,3 +16,35 @@ Dividete in piccoli problemi la consegna.
 Individuate gli elementi di cui avete bisogno per realizzare il programma.
 Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali e quanti numeri ci sono in comune tra i due array"
 */
+
+let numberList = document.getElementById('number-list')
+let timer = document.getElementById("timer");
+let startBtn = document.getElementById("start-btn");
+
+startBtn.addEventListener('click',startGame)
+
+let fiveNumbers = []
+
+function startGame(){
+
+    startBtn.classList.add('d-none')
+    timer.classList.remove('d-none')
+
+for (let i = 1; i <= 5; i++){
+    let randomNumber = (Math.floor(Math.random() * 100));
+    fiveNumbers.push(randomNumber);
+    numberList.innerHTML += `<li>${randomNumber}</li>`;
+
+}}
+
+console.log(fiveNumbers)
+
+const clock = setInterval(hideNumbers, 5000)
+
+function hideNumbers(){
+    numberList.classList.add('d-none')
+    timer.classList.add('d-none')
+}
+
+
+
