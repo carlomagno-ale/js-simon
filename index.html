@@ -18,9 +18,23 @@
 
 <body>
 
-  <h1><span id="timer" class="d-none">5</span></h1>  
+  <h1><span id="timer" class="d-none">7</span></h1>  
   <ul id="number-list" class=""></ul>
   <button id="start-btn">Inizia Gioco</button> 
+
+  <form id="form-input" class="d-none">
+    <div class="d-flex gap-5" id="user-input">
+      <input type="number" id="user-number-1" min="1" max="100" required>
+      <input type="number" id="user-number-2" min="1" max="100" required>
+      <input type="number" id="user-number-3" min="1" max="100" required>
+      <input type="number" id="user-number-4" min="1" max="100" required>
+      <input type="number" id="user-number-5" min="1" max="100" required>
+    </div>
+  </form>
+
+  <button id="check-btn" class="d-none">Conferma</button>
+
+  <span id="result-game"></span>
 
 
 
